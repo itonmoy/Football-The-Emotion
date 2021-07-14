@@ -80,30 +80,52 @@ section {
   height: 256px;
 }
 /* Third section  */
-hr{
+hr {
   border: 1px solid gray;
 }
-.quiz{
+.quiz {
   padding: 10px;
   text-align: center;
   font-weight: 700;
-
 }
-.quizzes{
+.quizzes {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   /* grid-template-rows: repeat(1, 1fr); */
   grid-gap: 5px;
 }
-.quizzes-parts{
+.quizzes-parts {
   width: 310px;
-  height: 250px;
-  margin: 10px 30px;
+  height: 260px;
+  margin: 20px 30px;
   padding: 10px;
   border-radius: 3px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
-.quizzes-parts img{
+.quizzes-parts img {
+  width: 100%;
+}
+
+/* fourth-section */
+.fourth-section h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #2d25a0;
+  font-family: "Poppins", sans-serif;
+}
+.Transfers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.Transfers--parts {
+  width: 210px;
+  height: 665px;
+  margin: 20px 30px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.Transfers--parts img {
   width: 100%;
 }
 /* footer section */
@@ -111,13 +133,19 @@ hr{
   display: flex;
   justify-content: center;
 }
+.footer-img {
+  width: 480px;
+}
 footer p {
   text-align: center;
 }
 
 /* media queries */
-@media only screen and (max-width: 480px) {
-  .players-card {
+@media only screen and (max-width: 688px) {
+  body {
+    width: 480px;
+  }
+  .players-area {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
@@ -132,7 +160,11 @@ footer p {
   .First-section__area2 img {
     width: 100%;
   }
-  .quizzes{
+  .quizzes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Transfers {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
@@ -143,7 +175,7 @@ footer p {
   }
 }
 @media only screen and (min-width: 689px) and (max-width: 992px) {
-  .players-card {
+  .players-area {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -158,9 +190,13 @@ footer p {
   .First-section__area2 img {
     width: 100%;
   }
-  .quizzes{
+  .quizzes {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Transfers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer-section {
     display: grid;
